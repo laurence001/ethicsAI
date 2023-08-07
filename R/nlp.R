@@ -11,7 +11,7 @@ stop <- read_csv("stop.txt")
 
 #GENERAL CORPUS
 corpusai <- data.frame(ethics$Country,ethics$Year,ethics$Text)
-corpusai <- head(corpusai,32)
+corpusai <- head(corpusai,33)
 colnames(corpusai) <- c("Country","Year","Text")
 datac <- ethics$Text
 
@@ -131,7 +131,7 @@ wordcloud2(freqb, size = 0.5, color = gray_colors)
 #SECOND WAVE AI
 
 corpusec <- ethics$Text
-corpusec <- tail(corpusec,23)
+corpusec <- tail(corpusec,24)
 corpusec <- as.data.frame(corpusec)
 colnames(corpusec) <- c("Text")
 results2wave <- text_analysis_function(corpusec, "Text", save_word_frequency = TRUE, save_ngrams = TRUE)
@@ -246,7 +246,7 @@ sentiments <- function(df) {
   # Return the finaldf and the ggplot chart
   return(list(finaldf = finaldf, ggplot_chart = ggplot_chart, sentiment_bing = sentiment_bing))
 }
-df23 <- tail(df,23)
+df23 <- tail(df,24)
 result <- sentiments(df)
 result23 <- sentiments(df23)
 finaldf <- result$finaldf
@@ -264,7 +264,7 @@ summary(neg)
 
 
 bing <- result23$sentiment_bing
-
+bing
 ggplot_chart <- result$ggplot_chart
 ggplot_chart
 
