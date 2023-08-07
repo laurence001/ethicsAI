@@ -1,5 +1,5 @@
 library(highcharter)
-library(dplyr)
+library(tidyverse)
 library(datapasta)
 
 data <- data.frame(
