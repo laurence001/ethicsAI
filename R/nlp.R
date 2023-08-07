@@ -5,7 +5,7 @@ library(highcharter)
 library(readxl)
 library(DT)
 
-ethics <- read_excel("ethics.xlsx")
+ethics <- read_excel("corpus.xlsx")
 
 stop <- read_csv("stop.txt")
 
