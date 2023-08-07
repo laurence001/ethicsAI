@@ -13,13 +13,13 @@ data <- data.frame(
                        "News Media","News Media","News Media",
                        "Press/Media Council","News Media","Press Agency","Public Broadcaster",
                        "News Media","Press/Media Council","Press Agency",
-                       "Press Group","Press Agency","Public Broadcaster",
+                       "Press Group","Press Agency","Public Broadcaster","News Media",
                        "News Media"),
               Year = c("2016","2019","2019","2020",
                        "2021","2021","Undated","Undated","2023","2023",
                        "2023","2023","2023","2023","2023","2023","2023",
                        "2023","2023","2023","2023","2023","2023","2023",
-                       "2023","2023","2023","2023","2023","2023"),
+                       "2023","2023","2023","2023","2023","2023","2023"),
               Text = c("Guidelines","Principles",
                        "Recommendation","Guidelines","Recommendation",
                        "Guidelines","Principles","Principles","Position","Position",
@@ -27,7 +27,7 @@ data <- data.frame(
                        "Guidelines","Guidelines","Guidelines","Principles",
                        "Charter","Ethical Code","Guidelines","Principles",
                        "Guidelines","Position","Ethical Code","Guidelines",
-                       "Position","Guidelines","Guidelines","Principles")
+                       "Position","Guidelines","Guidelines","Principles","Guidelines")
 )
 
 # Transform data for pivot table-like structure
@@ -78,4 +78,3 @@ ggplot(pivot_data, aes(x = Year, y = Count, fill = Organisation)) +
         legend.position = "bottom")
 
 summary(data)
-
