@@ -146,7 +146,7 @@ results2wave$frequency
 df2 <- as.data.frame(results2wave$frequency)
 df2 <- df2 %>%
   filter(n >= 10)
-View(df2)
+
 results2wave$bigrams
 results2wave$trigrams
 
@@ -225,8 +225,8 @@ sentiments <- function(df) {
   loughran_counts <- subset(loughran_counts, sentiment %in% c("negative", "positive"))
   nrc_counts <- subset(nrc_counts, sentiment %in% c("negative", "positive"))
   
-  lexicon <- c("Bing", "Bing", "Inquire", "Inquire", "Subjectivity", "Subjectivity", "Loughran", "Loughran", "NRC", "NRC")
-  compared <- rbind(bing_counts, inquire_counts, subjectivity_counts, loughran_counts, nrc_counts)
+  lexicon <- c("Bing", "Bing", "Inquire", "Inquire", "Subjectivity", "Subjectivity", "NRC", "NRC")
+  compared <- rbind(bing_counts, inquire_counts, subjectivity_counts, nrc_counts)
   finaldf <- cbind(lexicon, compared)
   finaldf$pc <- round(finaldf$pc, 2)
   
