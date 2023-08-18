@@ -131,7 +131,7 @@ wordcloud2(freqb, size = 0.5, color = gray_colors)
 #SECOND WAVE AI
 
 corpusec <- ethics$Text
-corpusec <- tail(corpusec,24)
+corpusec <- tail(corpusec,25)
 corpusec <- as.data.frame(corpusec)
 colnames(corpusec) <- c("Text")
 results2wave <- text_analysis_function(corpusec, "Text", save_word_frequency = TRUE, save_ngrams = TRUE)
